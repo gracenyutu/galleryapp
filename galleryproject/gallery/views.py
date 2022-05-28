@@ -5,10 +5,10 @@ def home(request):
     return render(request, 'gallery/home.html')
 
 def about(request):
-    return render(request, 'gallery/about.html')
+    return render(request, 'gallery/about.html', {'title': 'About'})
 
-def viewPhoto(request, id):
-    return render(request, 'gallery/viewphoto.html')
+def viewPhoto(request, pk):
+    return render(request, 'gallery/viewphoto.html', {'title': 'ViewPhoto'})
 
 def addPhoto(request):
-    return render(request, 'gallery/addphoto.html')
+    return render(request, 'gallery/addphoto.html', {'title': 'AddPhoto'})
