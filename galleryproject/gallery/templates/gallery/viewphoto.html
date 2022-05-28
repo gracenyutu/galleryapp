@@ -1,0 +1,14 @@
+{% extends 'gallery/base.html'%}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
+            <div class="view">
+                <img class="image" src="https://www.1800flowers.com/blog/wp-content/uploads/2015/10/red-roses.jpg.webp" alt="">
+                <p>Bouquet of red roses</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
