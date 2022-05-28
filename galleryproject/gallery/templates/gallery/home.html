@@ -2,26 +2,57 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-md-3"><div class="card" style="width: 18rem;">
-                <div class="card-header">
-                <h2>Categories</h2>
+            <div class="col-md-3">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-header">
+                    <h2>Categories</h2>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">All</li>
+                        <li class="list-group-item">Flowers</li>
+                        <li class="list-group-item">Wild Animals</li>
+                        <li class="list-group-item">Birds</li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                </ul>
-            </div>
             </div>
             <div class="col-md-9">
                 <h2>Photo album</h2>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card my-2">
                             <img class="card-img-top" src="https://www.1800flowers.com/blog/wp-content/uploads/2015/10/red-roses.jpg.webp" alt="red roses">
                             <div class="card-body">
-                                <p class="card-text"></p>
+                                <small>Category: Flowers</small>
                             </div>
+                            <a href="{% url 'photo' 1%}" class="btn btn-outline-primary btn-sm m-1" href="">View photo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card my-2">
+                            <img class="card-img-top" src="https://www.1800flowers.com/blog/wp-content/uploads/2015/10/red-roses.jpg.webp" alt="red roses">
+                            <div class="card-body">
+                                <small>Category: Flowers</small>
+                            </div>
+                            <a href="{% url 'photo' 2%}" class="btn btn-outline-primary btn-sm m-1" href="">View photo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card my-2">
+                            <img class="card-img-top" src="https://www.1800flowers.com/blog/wp-content/uploads/2015/10/red-roses.jpg.webp" alt="red roses">
+                            <div class="card-body">
+                                <small>Category: Flowers</small>
+                            </div>
+                            <a href="{% url 'photo' 3%}" class="btn btn-outline-primary btn-sm m-1" href="">View photo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card my-2">
+                            <img class="card-img-top" src="https://www.1800flowers.com/blog/wp-content/uploads/2015/10/red-roses.jpg.webp" alt="red roses">
+                            
+                            <div class="card-body">
+                                <small>Category: Flowers</small>
+                            </div>
+                            <a href="{% url 'photo' 4%}" class="btn btn-outline-primary btn-sm m-1" href="">View photo</a>
                         </div>
                     </div>
                 </div>
