@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
@@ -7,3 +6,9 @@ def home(request):
 
 def about(request):
     return render(request, 'gallery/about.html')
+
+def viewPhoto(request, id):
+    return render(request, 'gallery/viewphoto.html')
+
+def addPhoto(request):
+    return render(request, 'gallery/addphoto.html')
