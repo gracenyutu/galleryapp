@@ -5,7 +5,6 @@ backports.zoneinfo==0.2.1
 bcrypt==3.2.2
 blinker==1.4
 bootstrap-py==1.0.2
-ccsm==0.9.14.1
 certifi==2019.11.28
 cffi==1.15.0
 chardet==3.0.4
