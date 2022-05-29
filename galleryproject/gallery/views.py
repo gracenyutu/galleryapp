@@ -23,5 +23,26 @@ def addPhoto(request):
         data = request.POST
         image = request.FILES.get('image')
 
+        if data['category'] != 'none':
+            category =Category.objects.get(id=data['category'])
+        elif data['new_category'] != '':
+            category, created = Category.objects.get_or_create(name=data['new_category'])
+        else:
+            category = None
+
+        if data['location'] != 'none':
+            location =Location.objects.get(id=data['location'])
+        elif data['new_location'] != '':
+            location, created = Location.objects.get_or_create(name=data['new_location'])
+        else:
+            location = None
+
+        image = Image.objects.create(
+            category=category,
+            location=location,
+            description=data['description'],
+            image=image,
+        )
+
     context = {'categories': categories, 'location': location}
     return render(request, 'gallery/addphoto.html', context)
