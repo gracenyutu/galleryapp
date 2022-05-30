@@ -3,8 +3,13 @@ from .models import Category, Location, Image
 
 # Create your views here.
 def home(request):
-    categories = Category.objects.all()
-    images = Image.objects.all()
+    category =request.GET.get('category')
+    if category == None:
+        images = Image.objects.all()
+    else:
+        images = Image.objects.filter(category__name=category)
+        
+    categories = Category.objects.filter()
     context = {'categories': categories, 'images': images}
     return render(request, 'gallery/home.html', context)
 
