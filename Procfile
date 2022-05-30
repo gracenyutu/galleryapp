@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT gallery:app
+web: gunicorn galleryproject.wsgi --log-file -
