@@ -1,1 +1,1 @@
-web: gunicorn gallery:app
+web: gunicorn --bind 0.0.0.0:$PORT gallery:app
