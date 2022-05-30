@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-u(y*-h^2a4&g*7k&%4f%sbiewy&q^j@#^lc=i4we@0(nh^l%)q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '.127.0.0.1', 'galleryalbum.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0','localhost', '.127.0.0.1', 'mysterious-shore-83581.herokuapp.com']
 
 
 # Application definition
