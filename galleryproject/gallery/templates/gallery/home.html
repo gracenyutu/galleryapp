@@ -29,14 +29,14 @@
                     {% for image in images %}
                         <div class="col-md-4">
                             <div class="card my-2">
-                                <img class="gallery-image" src="{{image.image.url}}" alt="red roses">
+                                <img class="gallery-image" src="{{image.image.url}}" alt="">
                                 <div class="card-body">
                                     <small>Category: {{image.category.name}}</small>
                                 </div>
-                                <a href="{% url 'photo' image.id%}" class="btn btn-outline-primary btn-sm m-1" href="">View <small>in new tab</small> </a>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    View Photo
+                                <button type="button" class="btn btn-outline-primary btn-sm view-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    View 
                                 </button>
+                                <a href="{% url 'photo' image.id%}" class="btn btn-primary btn-sm m-1" href="">View <small>in new tab</small> </a>
                             </div>
                         </div>
                         <!-- Modal -->

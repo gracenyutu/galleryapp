@@ -53,14 +53,9 @@ def addPhoto(request):
     return render(request, 'gallery/addphoto.html', context)
 
 def search_results(request):
+    query =request.GET.get('query')
+    if query != None:
+        images= Image.objects.filter(category_name=query)
 
-    if 'category' in request.GET and request.GET["category"]:
-        search_term = request.GET.get("category")
-        searched_categories = Category.search_by_title(search_term)
-        message = f"{search_term}"
-
-        return render(request, 'gallery/search.html',{"message":message,"categories": searched_categories})
-
-    else:
-        message = "You haven't searched for any term"
-        return render(request, 'gallery/search.html',{"message":message})
+    context = {'images': images}
+    return render(request, 'gallery/search.html', context)

@@ -1,22 +1,15 @@
 {% extends 'gallery/base.html'%}
 {% block content %}
 <div class="row">
-    {% if categories%}
-      <h2>Found {{ categories|length }} of searched term {{message}}</h2>
-    {% else %}
-      <h2> Found 0 categories for the search term {{message}}</h2>
-    {% endif %}
-
-  </div>
-
-  <div class="row">
-
-  {% if categories %}
-    {% for article in categories %}
-      <div class="col-sm-6 col-md-3">
-          <h1>{{category.name}}</h1>
-      </div>
-    {% endfor %}
-  {% endif %}
-  </div>
-{% endblock %}
+  {% for image in images %}
+    <div class="col-md-4">
+        <div class="card my-2">
+            <img class="gallery-image" src="{{image.image.url}}" alt="">
+            <div class="card-body">
+                <small>Category: {{image.category.name}}</small>
+            </div>
+            <a href="{% url 'photo' image.id%}" class="btn btn-outline-primary btn-sm m-1" href="">View <small>in new tab</small> </a>
+        </div>
+    </div>
+</div>
+  {% endfor %}
