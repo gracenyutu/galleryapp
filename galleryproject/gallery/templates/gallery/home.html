@@ -33,9 +33,24 @@
                                 <div class="card-body">
                                     <small>Category: {{image.category.name}}</small>
                                 </div>
-                                <button type="button" class="btn btn-outline-primary btn-sm view-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    View 
-                                </button>
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary btn-sm view-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        View 
+                                    </button>
+                                    <button type="button" name="button" class="btn btn-info btn-sm view-btn" value="{{image.image.url}}" onclick="copylink(this.value)">Copy</button>
+                                </div>
+                                <script>
+                                    function copylink(value) {
+                                        console.log('hi yellow')
+                                        function handler(event){
+                                            event.clipboardData.setData('text/plain', value);
+                                            event.preventDefault();
+                                            document.removeEventListener('copy', handler, true);
+                                        }
+                                        document.addEventListener('copy', handler, true);
+                                        document.execCommand('copy');
+                                    }
+                                </script>
                                 <a href="{% url 'photo' image.id%}" class="btn btn-primary btn-sm m-1" href="">View <small>in new tab</small> </a>
                             </div>
                         </div>
