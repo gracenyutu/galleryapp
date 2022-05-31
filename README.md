@@ -8,7 +8,7 @@ Grace Nyutu
 
 ## Live Demo
 
-Click [Link]() to visit my site
+Click [Link](https://limitless-thicket-56269.herokuapp.com/) to visit my site
 
 ## Screenshot
 ![Screenshot from 2022-05-30 00-47-24](https://user-images.githubusercontent.com/95080265/170892595-a98a585a-204e-465b-a7cb-665d3a5297e3.png
